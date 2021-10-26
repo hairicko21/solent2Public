@@ -49,7 +49,7 @@ public class ShoppingItem {
     }
 
     public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+        this.quantity = quantity + 1;
     }
 
     public Double getPrice() {
