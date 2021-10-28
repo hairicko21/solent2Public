@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements.  See the NOTICE file
@@ -945,7 +945,7 @@
                 
                 
                 
-                <notes/>
+                <notes />
                                                                                             
                 
                 
@@ -985,7 +985,7 @@
                 
                 
                 
-                <notes/>
+                <notes />
                                                                                             
                 
                 
@@ -1025,7 +1025,7 @@
                 
                 
                 
-                <notes/>
+                <notes />
                                                                                             
                 
                 
@@ -1065,7 +1065,7 @@
                 
                 
                 
-                <notes/>
+                <notes />
                                                                                             
                 
                 
@@ -1135,7 +1135,7 @@
                 
                 
                 
-                <notes/>
+                <notes />
                                                                                             
                 
                 
@@ -1719,6 +1719,29 @@
   
   
   </profiles>
+            
+
+    
+  
+  
+  
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
         
   
   
