@@ -95,12 +95,18 @@
                     <!-- post avoids url encoded parameters -->
                     <form action="./home.jsp" method="get">
                         <input type="hidden" name="itemUUID" value="<%=item.getUuid()%>">
+                        <input type="hidden" name="itemName" value="<%=item.getName()%>"
                         <input type="hidden" name="action" value="removeItemFromCart">
                         <button type="submit" >Remove Item</button>
                     </form> 
                 </td>
             </tr>
             <% }%>
+            
+            <tr>
+                <td>Total</td>
+                <td><%=shoppingCart.getTotal()%></td>
+            </tr>
 
         </table>
 

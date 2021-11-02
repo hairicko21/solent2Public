@@ -31,7 +31,20 @@ public class ShoppingCartImpl implements ShoppingCart {
 
     @Override
     public void addItemToCart(ShoppingItem shoppingItem) {
-        itemMap.put(shoppingItem.getUuid(), shoppingItem);
+        //itemMap.put(shoppingItem.getUuid(), shoppingItem);
+        
+        boolean itemExists = false;
+        for (String itemUUID : itemMap.keySet()) {
+            ShoppingItem shoppingCartItem = itemMap.get(itemUUID);
+            if (shoppingCartItem.getName().equals(shoppingItem.getName())){
+                Integer q = shoppingCartItem.getQuantity();
+                shoppingCartItem.setQuantity(q + 1);
+                itemExists = true;
+                break;
+                
+            }
+        }
+        
     }
 
     @Override
@@ -41,7 +54,15 @@ public class ShoppingCartImpl implements ShoppingCart {
 
     @Override
     public double getTotal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //To change body of generated methods, choose Tools | Templates.
+    
+    double total = 0;
+    
+    for (String itemUUID : itemMap.keySet()) {
+        ShoppingItem shoppingCartItem = itemMap.get(itemUUID);
+        total = total + shoppingCartItem.getPrice() * shoppingCartItem.getQuantity();
+     }
+     return total;      
     }
 
 }
